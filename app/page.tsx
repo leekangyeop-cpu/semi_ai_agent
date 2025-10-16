@@ -3,6 +3,85 @@
 import { useState } from 'react';
 
 export default function Home() {
+  const [showDemo, setShowDemo] = useState(false);
+  const [userRequest, setUserRequest] = useState('');
+  const [aiResponse, setAiResponse] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleContactEmail = () => {
+    const subject = encodeURIComponent('Root Inside 문의');
+    const body = encodeURIComponent('안녕하세요,\n\nRoot Inside에 대해 문의드립니다.\n\n[문의 내용을 작성해주세요]');
+    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=consult@rootinsidegroup.com&su=${subject}&body=${body}`, '_blank');
+  };
+
+  const handleContactWithContext = () => {
+    const subject = encodeURIComponent('Root Inside AI 분석 기반 전문 컨설팅 문의');
+    const emailBody = `안녕하세요,
+
+Root Inside AI 데모를 통해 분석을 받았으며, 전문 컨설팅을 문의드립니다.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📋 고객 요청사항
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+${userRequest}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🤖 AI 분석 결과
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+${aiResponse}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+위 분석 결과를 바탕으로 구체적인 컨설팅을 진행하고 싶습니다.
+
+[추가 문의사항이나 요구사항을 작성해주세요]
+
+감사합니다.`;
+
+    const body = encodeURIComponent(emailBody);
+    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=consult@rootinsidegroup.com&su=${subject}&body=${body}`, '_blank');
+  };
+
+  const handleDemo = async () => {
+    if (!userRequest.trim()) {
+      alert('요청사항을 입력해주세요.');
+      return;
+    }
+
+    setIsLoading(true);
+    setAiResponse('');
+
+    try {
+      console.log('API 요청 시작:', userRequest);
+      
+      const response = await fetch('/api/demo', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ userRequest }),
+      });
+
+      console.log('응답 상태:', response.status);
+      
+      const data = await response.json();
+      console.log('응답 데이터:', data);
+
+      if (response.ok) {
+        setAiResponse(data.response);
+      } else {
+        const errorMsg = data.details ? `${data.error}\n상세: ${data.details}` : data.error;
+        setAiResponse('오류가 발생했습니다: ' + errorMsg);
+        console.error('API 에러:', errorMsg);
+      }
+    } catch (error) {
+      console.error('네트워크 에러:', error);
+      setAiResponse('AI 분석 중 오류가 발생했습니다. 네트워크 연결을 확인해주세요.');
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       {/* Navigation */}
@@ -23,7 +102,10 @@ export default function Home() {
               <a href="#features" className="text-slate-700 hover:text-blue-900 transition-colors font-medium">특징</a>
               <a href="#experts" className="text-slate-700 hover:text-blue-900 transition-colors font-medium">전문가</a>
             </div>
-            <button className="bg-gradient-to-r from-blue-900 to-blue-700 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all">
+            <button 
+              onClick={handleContactEmail}
+              className="bg-gradient-to-r from-blue-900 to-blue-700 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all"
+            >
               문의하기
             </button>
           </div>
@@ -44,11 +126,17 @@ export default function Home() {
             복잡한 시장 조사를 실행 가능한 전략적 가이드로 전환하는 AI 기반 컨설팅 플랫폼
           </p>
           <div className="flex justify-center gap-4">
-            <button className="bg-gradient-to-r from-blue-900 to-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-xl transition-all">
+            <button 
+              onClick={handleContactEmail}
+              className="bg-gradient-to-r from-blue-900 to-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-xl transition-all"
+            >
               시작하기
             </button>
-            <button className="border-2 border-blue-900 text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-50 transition-all">
-              데모 보기
+            <button 
+              onClick={() => setShowDemo(true)}
+              className="border-2 border-blue-900 text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-50 transition-all"
+            >
+              진단 받기
             </button>
           </div>
         </div>
@@ -228,7 +316,7 @@ export default function Home() {
       </section>
 
       {/* Risk Analysis Section */}
-      <section className="py-20 bg-slate-900 text-white">
+      <section id="risk" className="py-20 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">리스크 분석 및 위험성 평가</h2>
@@ -370,10 +458,16 @@ export default function Home() {
             AI 기반 분석과 전문가 네트워크로 귀사의 비즈니스 확장을 성공으로 이끌어드립니다
           </p>
           <div className="flex justify-center gap-4">
-            <button className="bg-white text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-50 transition-all">
+            <button 
+              onClick={handleContactEmail}
+              className="bg-white text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-50 transition-all"
+            >
               무료 상담 신청
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/10 transition-all">
+            <button 
+              onClick={() => setShowDemo(true)}
+              className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/10 transition-all"
+            >
               플랫폼 데모
             </button>
           </div>
@@ -398,16 +492,16 @@ export default function Home() {
             <div>
               <h4 className="font-bold mb-4">서비스</h4>
               <ul className="space-y-2 text-slate-400 text-sm">
-                <li>AI 시장 분석</li>
-                <li>전략 컨설팅</li>
-                <li>리스크 평가</li>
-                <li>전문가 매칭</li>
+                <li><a href="#features" className="hover:text-white transition-colors cursor-pointer">AI 시장 분석</a></li>
+                <li><a href="#process" className="hover:text-white transition-colors cursor-pointer">전략 컨설팅</a></li>
+                <li><a href="#risk" className="hover:text-white transition-colors cursor-pointer">리스크 평가</a></li>
+                <li><a href="#experts" className="hover:text-white transition-colors cursor-pointer">전문가 매칭</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-bold mb-4">회사</h4>
               <ul className="space-y-2 text-slate-400 text-sm">
-                <li>회사 소개</li>
+                <li><a href="/about" className="hover:text-white transition-colors cursor-pointer">회사 소개</a></li>
                 <li>팀</li>
                 <li>파트너</li>
                 <li>채용</li>
@@ -416,9 +510,7 @@ export default function Home() {
             <div>
               <h4 className="font-bold mb-4">연락처</h4>
               <ul className="space-y-2 text-slate-400 text-sm">
-                <li>info@rootinside.com</li>
-                <li>+82-2-1234-5678</li>
-                <li>서울시 강남구</li>
+                <li>contact@rootinsidegroup.com</li>
               </ul>
             </div>
           </div>
@@ -427,6 +519,96 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* Demo Modal */}
+      {showDemo && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="sticky top-0 bg-gradient-to-r from-blue-900 to-blue-700 text-white p-6 rounded-t-2xl">
+              <div className="flex justify-between items-center">
+                <h3 className="text-2xl font-bold">AI 컨설팅 데모</h3>
+                <button 
+                  onClick={() => {
+                    setShowDemo(false);
+                    setUserRequest('');
+                    setAiResponse('');
+                  }}
+                  className="text-white hover:bg-white/20 rounded-lg p-2 transition-all"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              <p className="text-blue-100 mt-2">
+                귀사의 비즈니스 요구사항을 입력하시면 AI가 필요한 업무와 전문가를 분석해드립니다.
+              </p>
+            </div>
+
+            <div className="p-6 space-y-6">
+              <div>
+                <label className="block text-sm font-semibold text-slate-700 mb-2">
+                  비즈니스 요청사항
+                </label>
+                <textarea
+                  value={userRequest}
+                  onChange={(e) => setUserRequest(e.target.value)}
+                  placeholder="예: 우리 회사는 K-뷰티 브랜드입니다. 북미 시장 진출을 계획하고 있으며, 현지 유통 채널과 마케팅 전략에 대한 조언이 필요합니다..."
+                  className="w-full h-32 px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-blue-500 focus:outline-none resize-none text-slate-900"
+                  disabled={isLoading}
+                />
+              </div>
+
+              <button
+                onClick={handleDemo}
+                disabled={isLoading || !userRequest.trim()}
+                className="w-full bg-gradient-to-r from-blue-900 to-blue-700 text-white px-6 py-4 rounded-lg font-semibold hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isLoading ? (
+                  <span className="flex items-center justify-center gap-2">
+                    <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                    </svg>
+                    AI 분석 중...
+                  </span>
+                ) : (
+                  'AI 분석 시작'
+                )}
+              </button>
+
+              {aiResponse && (
+                <div className="bg-gradient-to-br from-blue-50 to-slate-50 rounded-xl p-6 border-2 border-blue-200">
+                  <div className="flex items-start gap-3 mb-3">
+                    <div className="w-10 h-10 bg-gradient-to-br from-blue-900 to-blue-700 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                      </svg>
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="font-bold text-slate-900 mb-2 text-lg">AI 분석 결과</h4>
+                      <div className="text-slate-700 whitespace-pre-wrap leading-relaxed">
+                        {aiResponse}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-blue-200">
+                    <button
+                      onClick={handleContactWithContext}
+                      className="w-full bg-gradient-to-r from-amber-600 to-amber-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all flex items-center justify-center gap-2"
+                    >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                      분석 결과 기반 전문 컨설팅 문의하기
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
