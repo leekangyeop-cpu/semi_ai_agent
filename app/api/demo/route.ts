@@ -84,17 +84,18 @@ export async function POST(req: Request) {
     console.log('=== API 요청 완료 ===');
 
     return NextResponse.json({ response: text });
-  } catch (error: any) {
+  } catch (error) {
+    const err = error as Error;
     console.error('=== 에러 발생 ===');
-    console.error('에러 타입:', error.constructor.name);
-    console.error('에러 메시지:', error.message);
-    console.error('에러 스택:', error.stack);
+    console.error('에러 타입:', err.constructor.name);
+    console.error('에러 메시지:', err.message);
+    console.error('에러 스택:', err.stack);
     console.error('전체 에러 객체:', JSON.stringify(error, null, 2));
     
     return NextResponse.json(
       { 
         error: 'AI 분석 중 오류가 발생했습니다.',
-        details: error.message || '알 수 없는 오류'
+        details: err.message || '알 수 없는 오류'
       },
       { status: 500 }
     );

@@ -333,12 +333,12 @@ export default function About() {
             AI 기반 분석과 전문가 네트워크로 귀사의 비즈니스 확장을 성공으로 이끌어드립니다
           </p>
           <div className="flex justify-center gap-4">
-            <a 
+            <Link 
               href="/"
               className="bg-white text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-50 transition-all"
             >
               서비스 살펴보기
-            </a>
+            </Link>
             <a 
               href="mailto:contact@rootinsidegroup.com"
               className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/10 transition-all"
