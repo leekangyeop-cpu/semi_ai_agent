@@ -183,55 +183,55 @@ ${userRequest.substring(0, 300)}${userRequest.length > 300 ? '...' : ''}
           </div>
 
           <div className="grid md:grid-cols-4 gap-6">
-            <div className="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-900">
-              <div className="flex items-center justify-center w-12 h-12 bg-blue-900 text-white rounded-full font-bold text-xl mb-4">
+            <div className="group bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all border-l-4 border-blue-500">
+              <div className="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-xl font-bold text-xl mb-4 group-hover:scale-110 transition-transform shadow-md">
                 1
               </div>
               <h3 className="text-lg font-bold text-slate-900 mb-3">AI 데이터 수집</h3>
               <div className="space-y-2 text-sm text-slate-600">
-                <div><span className="text-blue-900">•</span> GPT 전략 분석</div>
-                <div><span className="text-blue-900">•</span> Gemini 정량 엔진</div>
-                <div><span className="text-blue-900">•</span> Perplexity 실시간 리서치</div>
-                <div><span className="text-blue-900">•</span> Claude 리포트 구조화</div>
+                <div className="flex items-center"><span className="text-blue-500 mr-2">•</span> GPT 전략 분석</div>
+                <div className="flex items-center"><span className="text-blue-500 mr-2">•</span> Gemini 정량 엔진</div>
+                <div className="flex items-center"><span className="text-blue-500 mr-2">•</span> Perplexity 실시간 리서치</div>
+                <div className="flex items-center"><span className="text-blue-500 mr-2">•</span> Claude 리포트 구조화</div>
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-lg border-t-4 border-slate-600">
-              <div className="flex items-center justify-center w-12 h-12 bg-slate-600 text-white rounded-full font-bold text-xl mb-4">
+            <div className="group bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all border-l-4 border-indigo-500">
+              <div className="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-indigo-500 to-indigo-600 text-white rounded-xl font-bold text-xl mb-4 group-hover:scale-110 transition-transform shadow-md">
                 2
               </div>
               <h3 className="text-lg font-bold text-slate-900 mb-3">성과 지표 분석</h3>
               <div className="space-y-2 text-sm text-slate-600">
-                <div><span className="text-slate-600">•</span> 시장 인텔리전스</div>
-                <div><span className="text-slate-600">•</span> 재무 성과</div>
-                <div><span className="text-slate-600">•</span> 성장 지표</div>
-                <div><span className="text-slate-600">•</span> 운영 리스크 평가</div>
+                <div className="flex items-center"><span className="text-indigo-500 mr-2">•</span> 시장 인텔리전스</div>
+                <div className="flex items-center"><span className="text-indigo-500 mr-2">•</span> 재무 성과</div>
+                <div className="flex items-center"><span className="text-indigo-500 mr-2">•</span> 성장 지표</div>
+                <div className="flex items-center"><span className="text-indigo-500 mr-2">•</span> 운영 리스크 평가</div>
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-lg border-t-4 border-slate-700">
-              <div className="flex items-center justify-center w-12 h-12 bg-slate-700 text-white rounded-full font-bold text-xl mb-4">
+            <div className="group bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all border-l-4 border-purple-500">
+              <div className="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 text-white rounded-xl font-bold text-xl mb-4 group-hover:scale-110 transition-transform shadow-md">
                 3
               </div>
               <h3 className="text-lg font-bold text-slate-900 mb-3">전략 리포트 작성</h3>
               <div className="space-y-2 text-sm text-slate-600">
-                <div><span className="text-slate-700">•</span> 시장 기회 정의</div>
-                <div><span className="text-slate-700">•</span> 시장 진단</div>
-                <div><span className="text-slate-700">•</span> 정량적 평가</div>
-                <div><span className="text-slate-700">•</span> 전략적 권고</div>
+                <div className="flex items-center"><span className="text-purple-500 mr-2">•</span> 시장 기회 정의</div>
+                <div className="flex items-center"><span className="text-purple-500 mr-2">•</span> 시장 진단</div>
+                <div className="flex items-center"><span className="text-purple-500 mr-2">•</span> 정량적 평가</div>
+                <div className="flex items-center"><span className="text-purple-500 mr-2">•</span> 전략적 권고</div>
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-lg border-t-4 border-slate-800">
-              <div className="flex items-center justify-center w-12 h-12 bg-slate-800 text-white rounded-full font-bold text-xl mb-4">
+            <div className="group bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all border-l-4 border-cyan-500">
+              <div className="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-cyan-500 to-cyan-600 text-white rounded-xl font-bold text-xl mb-4 group-hover:scale-110 transition-transform shadow-md">
                 4
               </div>
               <h3 className="text-lg font-bold text-slate-900 mb-3">전문가 매칭</h3>
               <div className="space-y-2 text-sm text-slate-600">
-                <div><span className="text-slate-800">•</span> 법률/회계 전문가</div>
-                <div><span className="text-slate-800">•</span> 마케팅 전략가</div>
-                <div><span className="text-slate-800">•</span> HR/공급망 전문가</div>
-                <div><span className="text-slate-800">•</span> IT 구현 파트너</div>
+                <div className="flex items-center"><span className="text-cyan-500 mr-2">•</span> 법률/회계 전문가</div>
+                <div className="flex items-center"><span className="text-cyan-500 mr-2">•</span> 마케팅 전략가</div>
+                <div className="flex items-center"><span className="text-cyan-500 mr-2">•</span> HR/공급망 전문가</div>
+                <div className="flex items-center"><span className="text-cyan-500 mr-2">•</span> IT 구현 파트너</div>
               </div>
             </div>
           </div>
