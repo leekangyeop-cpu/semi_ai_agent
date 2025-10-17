@@ -90,11 +90,12 @@ ${userRequest.substring(0, 300)}${userRequest.length > 300 ? '...' : ''}
                 Root Inside
               </span>
             </div>
-            <div className="hidden md:flex space-x-8">
+            <div className="hidden md:flex items-center space-x-6">
               <a href="#overview" className="text-slate-700 hover:text-blue-900 transition-colors font-medium">개요</a>
               <a href="#process" className="text-slate-700 hover:text-blue-900 transition-colors font-medium">프로세스</a>
               <a href="#features" className="text-slate-700 hover:text-blue-900 transition-colors font-medium">특징</a>
               <a href="#experts" className="text-slate-700 hover:text-blue-900 transition-colors font-medium">전문가</a>
+              <a href="/about" className="text-slate-700 hover:text-blue-900 transition-colors font-medium">회사 소개</a>
             </div>
             <button 
               onClick={handleContactEmail}
