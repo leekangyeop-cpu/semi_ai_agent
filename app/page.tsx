@@ -242,7 +242,7 @@ ${userRequest.substring(0, 300)}${userRequest.length > 300 ? '...' : ''}
       <section id="features" className="py-20 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">AI 에이전트 시스템</h2>
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">Root Inside Semi-AI Agent System</h2>
             <p className="text-xl text-slate-600">각 AI의 특화된 능력을 활용한 포괄적 분석</p>
           </div>
 
