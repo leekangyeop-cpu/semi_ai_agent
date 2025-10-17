@@ -141,41 +141,41 @@ ${userRequest.substring(0, 300)}${userRequest.length > 300 ? '...' : ''}
       <section className="py-20 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl shadow-lg border border-blue-200">
+            <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-slate-200 hover:border-blue-900 transition-all">
               <div className="w-14 h-14 bg-blue-900 rounded-lg flex items-center justify-center mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">AI 기반 리서치 자동화</h3>
-              <p className="text-slate-700">다중 AI 엔진을 활용한 포괄적인 시장 인텔리전스</p>
+              <p className="text-slate-600">다중 AI 엔진을 활용한 포괄적인 시장 인텔리전스</p>
             </div>
 
-            <div className="bg-gradient-to-br from-amber-50 to-amber-100 p-8 rounded-xl shadow-lg border border-amber-200">
-              <div className="w-14 h-14 bg-amber-700 rounded-lg flex items-center justify-center mb-4">
+            <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-slate-200 hover:border-blue-900 transition-all">
+              <div className="w-14 h-14 bg-slate-700 rounded-lg flex items-center justify-center mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">맞춤형 전략 리포팅</h3>
-              <p className="text-slate-700">비즈니스 목표에 맞춘 실행 가능한 인사이트</p>
+              <p className="text-slate-600">비즈니스 목표에 맞춘 실행 가능한 인사이트</p>
             </div>
 
-            <div className="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-xl shadow-lg border border-green-200">
-              <div className="w-14 h-14 bg-green-700 rounded-lg flex items-center justify-center mb-4">
+            <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-slate-200 hover:border-blue-900 transition-all">
+              <div className="w-14 h-14 bg-slate-600 rounded-lg flex items-center justify-center mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">전문가 네트워크 통합</h3>
-              <p className="text-slate-700">구현 지원을 위한 전문가와의 원활한 연결</p>
+              <p className="text-slate-600">구현 지원을 위한 전문가와의 원활한 연결</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Process Flow Section */}
-      <section id="process" className="py-20 bg-gradient-to-br from-blue-50 to-slate-50">
+      <section id="process" className="py-20 bg-gradient-to-br from-slate-50 to-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">플랫폼 프로세스</h2>
@@ -196,42 +196,42 @@ ${userRequest.substring(0, 300)}${userRequest.length > 300 ? '...' : ''}
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-lg border-t-4 border-amber-600">
-              <div className="flex items-center justify-center w-12 h-12 bg-amber-600 text-white rounded-full font-bold text-xl mb-4">
+            <div className="bg-white p-6 rounded-xl shadow-lg border-t-4 border-slate-600">
+              <div className="flex items-center justify-center w-12 h-12 bg-slate-600 text-white rounded-full font-bold text-xl mb-4">
                 2
               </div>
               <h3 className="text-lg font-bold text-slate-900 mb-3">성과 지표 분석</h3>
               <div className="space-y-2 text-sm text-slate-600">
-                <div><span className="text-amber-600">•</span> 시장 인텔리전스</div>
-                <div><span className="text-amber-600">•</span> 재무 성과</div>
-                <div><span className="text-amber-600">•</span> 성장 지표</div>
-                <div><span className="text-amber-600">•</span> 운영 리스크 평가</div>
+                <div><span className="text-slate-600">•</span> 시장 인텔리전스</div>
+                <div><span className="text-slate-600">•</span> 재무 성과</div>
+                <div><span className="text-slate-600">•</span> 성장 지표</div>
+                <div><span className="text-slate-600">•</span> 운영 리스크 평가</div>
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-lg border-t-4 border-green-600">
-              <div className="flex items-center justify-center w-12 h-12 bg-green-600 text-white rounded-full font-bold text-xl mb-4">
+            <div className="bg-white p-6 rounded-xl shadow-lg border-t-4 border-slate-700">
+              <div className="flex items-center justify-center w-12 h-12 bg-slate-700 text-white rounded-full font-bold text-xl mb-4">
                 3
               </div>
               <h3 className="text-lg font-bold text-slate-900 mb-3">전략 리포트 작성</h3>
               <div className="space-y-2 text-sm text-slate-600">
-                <div><span className="text-green-600">•</span> 시장 기회 정의</div>
-                <div><span className="text-green-600">•</span> 시장 진단</div>
-                <div><span className="text-green-600">•</span> 정량적 평가</div>
-                <div><span className="text-green-600">•</span> 전략적 권고</div>
+                <div><span className="text-slate-700">•</span> 시장 기회 정의</div>
+                <div><span className="text-slate-700">•</span> 시장 진단</div>
+                <div><span className="text-slate-700">•</span> 정량적 평가</div>
+                <div><span className="text-slate-700">•</span> 전략적 권고</div>
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-lg border-t-4 border-purple-600">
-              <div className="flex items-center justify-center w-12 h-12 bg-purple-600 text-white rounded-full font-bold text-xl mb-4">
+            <div className="bg-white p-6 rounded-xl shadow-lg border-t-4 border-slate-800">
+              <div className="flex items-center justify-center w-12 h-12 bg-slate-800 text-white rounded-full font-bold text-xl mb-4">
                 4
               </div>
               <h3 className="text-lg font-bold text-slate-900 mb-3">전문가 매칭</h3>
               <div className="space-y-2 text-sm text-slate-600">
-                <div><span className="text-purple-600">•</span> 법률/회계 전문가</div>
-                <div><span className="text-purple-600">•</span> 마케팅 전략가</div>
-                <div><span className="text-purple-600">•</span> HR/공급망 전문가</div>
-                <div><span className="text-purple-600">•</span> IT 구현 파트너</div>
+                <div><span className="text-slate-800">•</span> 법률/회계 전문가</div>
+                <div><span className="text-slate-800">•</span> 마케팅 전략가</div>
+                <div><span className="text-slate-800">•</span> HR/공급망 전문가</div>
+                <div><span className="text-slate-800">•</span> IT 구현 파트너</div>
               </div>
             </div>
           </div>
@@ -247,14 +247,14 @@ ${userRequest.substring(0, 300)}${userRequest.length > 300 ? '...' : ''}
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-xl shadow-lg border border-green-100">
+            <div className="bg-gradient-to-br from-slate-50 to-slate-100 p-8 rounded-xl shadow-lg border border-slate-200 hover:border-slate-300 transition-all">
               <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mr-4">
+                <div className="w-12 h-12 bg-slate-700 rounded-lg flex items-center justify-center mr-4">
                   <span className="text-white font-bold">GPT</span>
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900">전략 분석 엔진</h3>
               </div>
-              <p className="text-slate-700 mb-4">시장 트렌드 종합, 경쟁 환경 매핑, 소비자 행동 분석</p>
+              <p className="text-slate-600 mb-4">시장 트렌드 종합, 경쟁 환경 매핑, 소비자 행동 분석</p>
               <ul className="space-y-2 text-slate-600">
                 <li>✓ 시장 역학 관계 분석</li>
                 <li>✓ 기회 및 도전 과제 식별</li>
@@ -262,14 +262,14 @@ ${userRequest.substring(0, 300)}${userRequest.length > 300 ? '...' : ''}
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-xl shadow-lg border border-blue-100">
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl shadow-lg border border-blue-200 hover:border-blue-300 transition-all">
               <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
+                <div className="w-12 h-12 bg-blue-700 rounded-lg flex items-center justify-center mr-4">
                   <span className="text-white font-bold text-sm">Gemini</span>
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900">정량 분석 엔진</h3>
               </div>
-              <p className="text-slate-700 mb-4">KPI 계산, 재무 모델링, 비즈니스 시나리오 시뮬레이션</p>
+              <p className="text-slate-600 mb-4">KPI 계산, 재무 모델링, 비즈니스 시나리오 시뮬레이션</p>
               <ul className="space-y-2 text-slate-600">
                 <li>✓ 예측 모델 및 리스크 평가</li>
                 <li>✓ 재무 시뮬레이션</li>
@@ -277,14 +277,14 @@ ${userRequest.substring(0, 300)}${userRequest.length > 300 ? '...' : ''}
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-xl shadow-lg border border-purple-100">
+            <div className="bg-gradient-to-br from-indigo-50 to-indigo-100 p-8 rounded-xl shadow-lg border border-indigo-200 hover:border-indigo-300 transition-all">
               <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+                <div className="w-12 h-12 bg-indigo-700 rounded-lg flex items-center justify-center mr-4">
                   <span className="text-white font-bold text-xs">Pplx</span>
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900">실시간 인텔리전스</h3>
               </div>
-              <p className="text-slate-700 mb-4">현재 시장 데이터 수집, 업계 뉴스 분석, 신흥 트렌드 식별</p>
+              <p className="text-slate-600 mb-4">현재 시장 데이터 수집, 업계 뉴스 분석, 신흥 트렌드 식별</p>
               <ul className="space-y-2 text-slate-600">
                 <li>✓ 최신 시장 상황 반영</li>
                 <li>✓ 규제 변경사항 모니터링</li>
@@ -292,14 +292,14 @@ ${userRequest.substring(0, 300)}${userRequest.length > 300 ? '...' : ''}
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-amber-50 to-orange-50 p-8 rounded-xl shadow-lg border border-amber-100">
+            <div className="bg-gradient-to-br from-slate-50 to-slate-100 p-8 rounded-xl shadow-lg border border-slate-200 hover:border-slate-300 transition-all">
               <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-amber-600 rounded-lg flex items-center justify-center mr-4">
+                <div className="w-12 h-12 bg-slate-600 rounded-lg flex items-center justify-center mr-4">
                   <span className="text-white font-bold text-sm">Claude</span>
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900">리포트 아키텍처</h3>
               </div>
-              <p className="text-slate-700 mb-4">전문적인 내러티브 개발, 경영진 요약, 전략적 권고안</p>
+              <p className="text-slate-600 mb-4">전문적인 내러티브 개발, 경영진 요약, 전략적 권고안</p>
               <ul className="space-y-2 text-slate-600">
                 <li>✓ 실행 가능한 문서 전환</li>
                 <li>✓ 설득력 있는 비즈니스 문서</li>
@@ -590,7 +590,7 @@ ${userRequest.substring(0, 300)}${userRequest.length > 300 ? '...' : ''}
                   <div className="mt-4 pt-4 border-t border-blue-200">
                     <button
                       onClick={handleContactWithContext}
-                      className="w-full bg-gradient-to-r from-amber-600 to-amber-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all flex items-center justify-center gap-2"
+                      className="w-full bg-gradient-to-r from-slate-700 to-slate-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all flex items-center justify-center gap-2"
                     >
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
