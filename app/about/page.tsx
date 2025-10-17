@@ -32,16 +32,16 @@ export default function About() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6 bg-gradient-to-br from-slate-800 to-slate-700 text-white">
+      <section className="pt-32 pb-20 px-6 bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Root Inside
             </h1>
-            <p className="text-2xl md:text-3xl text-slate-200 mb-8">
+            <p className="text-2xl md:text-3xl text-blue-100 mb-8">
               AI-Powered Market Expansion Insight Engine
             </p>
-            <p className="text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-blue-200 max-w-4xl mx-auto leading-relaxed">
               기업의 시장 확장 시기에 포괄적이고 데이터 중심의 시장 분석을 통해 
               비즈니스 의사결정을 가속화하는 지능형 컨설팅 플랫폼입니다.
             </p>
@@ -62,40 +62,40 @@ export default function About() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-slate-200 hover:border-blue-900 transition-all">
-              <div className="w-14 h-14 bg-blue-900 rounded-lg flex items-center justify-center mb-4">
+            <div className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-xl shadow-lg border-2 border-blue-100 hover:border-blue-500 hover:shadow-xl transition-all">
+              <div className="w-14 h-14 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center mb-4 shadow-md">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">AI 기반 리서치 자동화</h3>
-              <p className="text-slate-600">
+              <p className="text-slate-700">
                 다중 AI 엔진(GPT, Gemini, Perplexity, Claude)을 활용하여 
                 포괄적인 시장 인텔리전스를 제공합니다.
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-slate-200 hover:border-blue-900 transition-all">
-              <div className="w-14 h-14 bg-slate-700 rounded-lg flex items-center justify-center mb-4">
+            <div className="bg-gradient-to-br from-indigo-50 to-white p-8 rounded-xl shadow-lg border-2 border-indigo-100 hover:border-indigo-500 hover:shadow-xl transition-all">
+              <div className="w-14 h-14 bg-gradient-to-br from-indigo-600 to-indigo-700 rounded-lg flex items-center justify-center mb-4 shadow-md">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">맞춤형 전략 리포팅</h3>
-              <p className="text-slate-600">
+              <p className="text-slate-700">
                 특정 비즈니스 목표에 맞춘 맞춤형 인사이트와 
                 실행 가능한 전략을 제공합니다.
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-slate-200 hover:border-blue-900 transition-all">
-              <div className="w-14 h-14 bg-slate-600 rounded-lg flex items-center justify-center mb-4">
+            <div className="bg-gradient-to-br from-purple-50 to-white p-8 rounded-xl shadow-lg border-2 border-purple-100 hover:border-purple-500 hover:shadow-xl transition-all">
+              <div className="w-14 h-14 bg-gradient-to-br from-purple-600 to-purple-700 rounded-lg flex items-center justify-center mb-4 shadow-md">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">전문가 네트워크 통합</h3>
-              <p className="text-slate-600">
+              <p className="text-slate-700">
                 구현 지원을 위한 전문가들과의 원활한 조정 및 
                 프로젝트 협업 서비스를 제공합니다.
               </p>
@@ -161,12 +161,12 @@ export default function About() {
 
           <div className="space-y-12">
             {/* Phase 1 */}
-            <div className="bg-gradient-to-r from-slate-800 to-slate-700 text-white p-8 rounded-xl shadow-xl">
+            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-8 rounded-xl shadow-xl">
               <h3 className="text-3xl font-bold mb-6">Phase 1: 지능형 데이터 수집</h3>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
                   <h4 className="text-xl font-bold mb-3">GPT 전략 분석</h4>
-                  <p className="text-slate-200">
+                  <p className="text-blue-100">
                     시장 트렌드 종합, 경쟁 환경 매핑, 소비자 행동 분석. 
                     시장 역학에 대한 미묘한 통찰력을 제공하여 기회와 잠재적 도전을 식별합니다.
                   </p>
@@ -196,12 +196,12 @@ export default function About() {
             </div>
 
             {/* Phase 2 */}
-            <div className="bg-gradient-to-r from-slate-700 to-slate-600 text-white p-8 rounded-xl shadow-xl">
+            <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-8 rounded-xl shadow-xl">
               <h3 className="text-3xl font-bold mb-6">Phase 2: 전략적 성과 지표</h3>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
                   <h4 className="text-xl font-bold mb-3">시장 인텔리전스 메트릭</h4>
-                  <ul className="space-y-2 text-slate-200">
+                  <ul className="space-y-2 text-indigo-100">
                     <li>• TAM/SAM/SOM 분석 및 성장 예측</li>
                     <li>• 시장 침투 전략 및 경쟁 포지셔닝</li>
                     <li>• 고객 전환 최적화</li>
@@ -210,7 +210,7 @@ export default function About() {
                 </div>
                 <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
                   <h4 className="text-xl font-bold mb-3">재무 성과 프레임워크</h4>
-                  <ul className="space-y-2 text-slate-200">
+                  <ul className="space-y-2 text-indigo-100">
                     <li>• ROI 예측 및 민감도 분석</li>
                     <li>• 손익분기점 분석</li>
                     <li>• 수익성 메트릭</li>
@@ -219,7 +219,7 @@ export default function About() {
                 </div>
                 <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
                   <h4 className="text-xl font-bold mb-3">성장 및 확장성 지표</h4>
-                  <ul className="space-y-2 text-slate-200">
+                  <ul className="space-y-2 text-indigo-100">
                     <li>• 매출 성장 분석</li>
                     <li>• ARR/MRR 예측</li>
                     <li>• 고객 참여 메트릭</li>
@@ -228,7 +228,7 @@ export default function About() {
                 </div>
                 <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
                   <h4 className="text-xl font-bold mb-3">운영 리스크 평가</h4>
-                  <ul className="space-y-2 text-slate-200">
+                  <ul className="space-y-2 text-indigo-100">
                     <li>• 공급망 회복력</li>
                     <li>• 운영 효율성 메트릭</li>
                     <li>• 시장 민감도 분석</li>
@@ -239,38 +239,38 @@ export default function About() {
             </div>
 
             {/* Phase 3 */}
-            <div className="bg-gradient-to-r from-blue-900 to-blue-800 text-white p-8 rounded-xl shadow-xl">
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-8 rounded-xl shadow-xl">
               <h3 className="text-3xl font-bold mb-6">Phase 3: 경영진 리포팅 및 전략 내러티브</h3>
-              <p className="text-blue-100 mb-6">
+              <p className="text-purple-100 mb-6">
                 검증된 컨설팅 방법론을 따르는 포괄적인 비즈니스 인텔리전스 문서 생성
               </p>
               <div className="grid md:grid-cols-4 gap-4">
                 <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm text-center">
                   <div className="text-3xl font-bold mb-2">1</div>
-                  <p className="text-blue-100">시장 기회 정의</p>
+                  <p className="text-purple-100">시장 기회 정의</p>
                 </div>
                 <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm text-center">
                   <div className="text-3xl font-bold mb-2">2</div>
-                  <p className="text-blue-100">포괄적 시장 진단</p>
+                  <p className="text-purple-100">포괄적 시장 진단</p>
                 </div>
                 <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm text-center">
                   <div className="text-3xl font-bold mb-2">3</div>
-                  <p className="text-blue-100">정량적 평가</p>
+                  <p className="text-purple-100">정량적 평가</p>
                 </div>
                 <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm text-center">
                   <div className="text-3xl font-bold mb-2">4</div>
-                  <p className="text-blue-100">전략적 권장사항</p>
+                  <p className="text-purple-100">전략적 권장사항</p>
                 </div>
               </div>
             </div>
 
             {/* Phase 4 */}
-            <div className="bg-gradient-to-r from-slate-700 to-slate-600 text-white p-8 rounded-xl shadow-xl">
+            <div className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white p-8 rounded-xl shadow-xl">
               <h3 className="text-3xl font-bold mb-6">Phase 4: 전문가 네트워크 및 구현 지원</h3>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
                   <h4 className="text-xl font-bold mb-3">핵심 전문가 네트워크</h4>
-                  <ul className="space-y-2 text-slate-200">
+                  <ul className="space-y-2 text-cyan-100">
                     <li>• 법인 법률 자문</li>
                     <li>• 공인 회계사</li>
                     <li>• 세무 전략 고문</li>
@@ -279,7 +279,7 @@ export default function About() {
                 </div>
                 <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
                   <h4 className="text-xl font-bold mb-3">확장 전문가 네트워크</h4>
-                  <ul className="space-y-2 text-slate-200">
+                  <ul className="space-y-2 text-cyan-100">
                     <li>• 성장 마케팅 전략가</li>
                     <li>• 조직 개발 컨설턴트</li>
                     <li>• 공급망 최적화 전문가</li>
@@ -293,49 +293,49 @@ export default function About() {
       </section>
 
       {/* Performance Metrics */}
-      <section className="py-20 px-6 bg-gradient-to-br from-slate-800 to-slate-700 text-white">
+      <section className="py-20 px-6 bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900 text-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6">성과 지표</h2>
-            <p className="text-xl text-slate-200">검증된 결과로 입증되는 플랫폼의 가치</p>
+            <p className="text-xl text-indigo-200">검증된 결과로 입증되는 플랫폼의 가치</p>
           </div>
 
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-5xl font-bold mb-2">48시간</div>
-              <div className="text-slate-200 font-medium">리서치 완료</div>
-              <div className="text-sm text-slate-300 mt-1">vs. 수주 (전통적)</div>
+              <div className="text-indigo-200 font-medium">리서치 완료</div>
+              <div className="text-sm text-indigo-300 mt-1">vs. 수주 (전통적)</div>
             </div>
             <div className="text-center">
               <div className="text-5xl font-bold mb-2">70%</div>
-              <div className="text-slate-200 font-medium">비용 절감</div>
-              <div className="text-sm text-slate-300 mt-1">전통 컨설팅 대비</div>
+              <div className="text-purple-200 font-medium">비용 절감</div>
+              <div className="text-sm text-purple-300 mt-1">전통 컨설팅 대비</div>
             </div>
             <div className="text-center">
               <div className="text-5xl font-bold mb-2">95%</div>
-              <div className="text-slate-200 font-medium">고객 만족도</div>
-              <div className="text-sm text-slate-300 mt-1">리서치 정확도</div>
+              <div className="text-blue-200 font-medium">고객 만족도</div>
+              <div className="text-sm text-blue-300 mt-1">리서치 정확도</div>
             </div>
             <div className="text-center">
               <div className="text-5xl font-bold mb-2">85%</div>
-              <div className="text-slate-200 font-medium">시장 진입 성공률</div>
-              <div className="text-sm text-slate-300 mt-1">구현 성공 비율</div>
+              <div className="text-cyan-200 font-medium">시장 진입 성공률</div>
+              <div className="text-sm text-cyan-300 mt-1">구현 성공 비율</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 bg-gradient-to-r from-slate-800 to-slate-700 text-white">
+      <section className="py-20 px-6 bg-gradient-to-r from-blue-900 via-indigo-900 to-purple-900 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6">Root Inside와 함께 성장하세요</h2>
-          <p className="text-xl text-slate-200 mb-8">
+          <p className="text-xl text-blue-100 mb-8">
             AI 기반 분석과 전문가 네트워크로 귀사의 비즈니스 확장을 성공으로 이끌어드립니다
           </p>
           <div className="flex justify-center gap-4">
             <Link 
               href="/"
-              className="bg-white text-slate-800 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-slate-100 transition-all"
+              className="bg-white text-indigo-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-50 transition-all shadow-lg"
             >
               서비스 살펴보기
             </Link>
