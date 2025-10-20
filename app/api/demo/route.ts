@@ -1,6 +1,8 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { NextResponse } from 'next/server';
 
+// 빌드 시점에는 환경 변수가 없을 수 있으므로 빈 문자열로 초기화
+// 실제 API 호출 시점에 다시 확인합니다
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || '');
 
 export async function POST(req: Request) {
@@ -18,7 +20,7 @@ export async function POST(req: Request) {
       );
     }
 
-    // API 키 확인
+    // API 키 확인 (런타임에 다시 확인)
     const apiKey = process.env.GEMINI_API_KEY;
     console.log('API 키 존재 여부:', !!apiKey);
     console.log('API 키 길이:', apiKey?.length || 0);
@@ -26,12 +28,14 @@ export async function POST(req: Request) {
     if (!apiKey || apiKey === 'your_gemini_api_key_here') {
       console.log('에러: API 키 미설정');
       return NextResponse.json(
-        { error: 'Gemini API 키가 설정되지 않았습니다. .env.local 파일에 GEMINI_API_KEY를 설정해주세요.' },
+        { error: 'Gemini API 키가 설정되지 않았습니다. Vercel 환경 변수에 GEMINI_API_KEY를 설정해주세요.' },
         { status: 500 }
       );
     }
 
-    const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
+    // 런타임에 API 키로 새 인스턴스 생성 (안전성 보장)
+    const genAIRuntime = new GoogleGenerativeAI(apiKey);
+    const model = genAIRuntime.getGenerativeModel({ model: 'gemini-2.5-flash' });
 
     const context = `
 당신은 Root Inside의 AI 컨설팅 전문가입니다. Root Inside는 다음과 같은 서비스를 제공하는 AI 기반 시장 확장 인텔리전스 플랫폼입니다:
