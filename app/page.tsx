@@ -8,6 +8,13 @@ export default function Home() {
   const [aiResponse, setAiResponse] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
+  const handleScrollTo = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   const handleContactEmail = () => {
     const subject = encodeURIComponent('Root Inside 문의');
     const body = encodeURIComponent('안녕하세요,\n\nRoot Inside에 대해 문의드립니다.\n\n[문의 내용을 작성해주세요]');
@@ -91,10 +98,10 @@ ${userRequest.substring(0, 300)}${userRequest.length > 300 ? '...' : ''}
               </span>
             </div>
             <div className="hidden md:flex items-center space-x-6">
-              <a href="#overview" className="text-slate-700 hover:text-blue-900 transition-colors font-medium">개요</a>
-              <a href="#process" className="text-slate-700 hover:text-blue-900 transition-colors font-medium">프로세스</a>
-              <a href="#features" className="text-slate-700 hover:text-blue-900 transition-colors font-medium">특징</a>
-              <a href="#experts" className="text-slate-700 hover:text-blue-900 transition-colors font-medium">전문가</a>
+              <button onClick={() => handleScrollTo('overview')} className="text-slate-700 hover:text-blue-900 transition-colors font-medium">개요</button>
+              <button onClick={() => handleScrollTo('process')} className="text-slate-700 hover:text-blue-900 transition-colors font-medium">프로세스</button>
+              <button onClick={() => handleScrollTo('features')} className="text-slate-700 hover:text-blue-900 transition-colors font-medium">특징</button>
+              <button onClick={() => handleScrollTo('experts')} className="text-slate-700 hover:text-blue-900 transition-colors font-medium">전문가</button>
               <a href="/about" className="text-slate-700 hover:text-blue-900 transition-colors font-medium">회사 소개</a>
             </div>
             <button 
