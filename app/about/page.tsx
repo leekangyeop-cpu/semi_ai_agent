@@ -3,6 +3,12 @@
 import Link from 'next/link';
 
 export default function About() {
+  const handleContactEmail = () => {
+    const subject = encodeURIComponent('Root Inside 문의');
+    const body = encodeURIComponent('안녕하세요,\n\nRoot Inside에 대해 문의드립니다.\n\n[문의 내용을 작성해주세요]');
+    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=consult@rootinsidegroup.com&su=${subject}&body=${body}`, '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       {/* Navigation */}
@@ -21,12 +27,12 @@ export default function About() {
               <Link href="/" className="text-slate-700 hover:text-blue-900 transition-colors font-medium">홈</Link>
               <Link href="/about" className="text-blue-900 font-semibold">회사 소개</Link>
             </div>
-            <a 
-              href="mailto:contact@rootinsidegroup.com"
+            <button 
+              onClick={handleContactEmail}
               className="bg-gradient-to-r from-blue-900 to-blue-700 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all"
             >
               문의하기
-            </a>
+            </button>
           </div>
         </div>
       </nav>
@@ -404,12 +410,12 @@ export default function About() {
             >
               서비스 살펴보기
             </Link>
-            <a 
-              href="mailto:consult@rootinsidegroup.com"
+            <button 
+              onClick={handleContactEmail}
               className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/10 transition-all"
             >
               문의하기
-            </a>
+            </button>
           </div>
         </div>
       </section>

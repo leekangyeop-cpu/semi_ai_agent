@@ -138,7 +138,7 @@ ${userRequest.substring(0, 300)}${userRequest.length > 300 ? '...' : ''}
       </section>
 
       {/* Value Props */}
-      <section className="py-20 px-6 bg-white">
+      <section id="overview" className="py-20 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-xl shadow-lg border-2 border-blue-100 hover:border-blue-500 hover:shadow-xl transition-all">
