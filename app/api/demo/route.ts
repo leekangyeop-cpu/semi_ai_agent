@@ -1,9 +1,8 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { NextResponse } from 'next/server';
 
-// 빌드 시점에는 환경 변수가 없을 수 있으므로 빈 문자열로 초기화
-// 실제 API 호출 시점에 다시 확인합니다
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || '');
+// Ensure this route runs in a Node runtime on Vercel so process.env is available at request time
+export const runtime = 'nodejs';
 
 export async function POST(req: Request) {
   try {
@@ -33,8 +32,9 @@ export async function POST(req: Request) {
       );
     }
 
-    // 런타임에 API 키로 새 인스턴스 생성 (안전성 보장)
-    const genAIRuntime = new GoogleGenerativeAI(apiKey);
+  // 런타임에 API 키로 새 인스턴스 생성 (안전성 보장)
+  // Create the client at request time to avoid build-time access to environment variables
+  const genAIRuntime = new GoogleGenerativeAI(apiKey);
     const model = genAIRuntime.getGenerativeModel({ model: 'gemini-2.5-flash' });
 
     const context = `
